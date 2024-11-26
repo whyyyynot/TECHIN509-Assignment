@@ -13,7 +13,11 @@ s.setup(width=500, height=400)
 bet = s.textinput(title="Make your Bet", prompt="Which turtle which win ? Enter Color : ")
 X = -230
 Y = -100
-colors = ["red", "orange", "yellow", "blue", "violet"]
+colors = ["red", "green", "blue", "yellow", "purple", "orange"]
+if bet not in colors:
+    print(f"Invalid input: '{bet}'. Please enter one of the following colors: {', '.join(colors)}")
+    exit()
+
 
 turtles = []
 for i in range(0, 5):
